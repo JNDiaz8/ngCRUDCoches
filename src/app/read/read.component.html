@@ -1,0 +1,17 @@
+<p>Lista de coches</p>
+<table>
+  <tr>
+    <td><b>ID</b></td>
+    <td><b>Marca</b></td>
+    <td><b>Modelo</b></td>
+    <td><b>Color</b></td>
+    <td><b>Año</b></td>
+  </tr>
+  <tr *ngFor="let car of coches">
+    <td><b>{{car.id}}</b></td>
+    <td><b [routerLink]="['/read', car.id]">{{car.marca}}</b></td>
+    <td>{{car.modelo}}</td>
+    <td>{{car.color}}</td>
+    <td>{{car.anio}}</td>
+  </tr>
+</table>
