@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Coche } from 'src/modelos/coche';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { CochesService } from '../coches.service';
+
 
 @Component({
   selector: 'app-create',
@@ -9,28 +10,38 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class CreateComponent implements OnInit {
 
-  altaForm: FormGroup;
+  garaje: Array<Coche>;
+  coche: Coche = {id: null, marca: '', modelo: '', color: '', anio: null};
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private cocheService: CochesService) {}
 
   ngOnInit() {
-    this.altaForm = this.formBuilder.group({
-      marca: ['', Validators],
-      modelo: ['', Validators],
-      color: ['', Validators],
-      anio: ['', Validators],
-    });
+
   }
 
-  guardar(){
-    let coche: Coche;
-    coche = {
-      id: this.altaForm.value.id,
-      marca: this.altaForm.value.marca,
-      modelo: this.altaForm.value.modelo,
-      color: this.altaForm.value.color,
-      anio: this.altaForm.value.anio
-    }
+  altaCoche() {
+    let nuevoCoche: Coche = {
+      id: this.coche.id,
+      marca: this.coche.marca,
+      modelo: this.coche.modelo,
+      color: this.coche.color,
+      anio: this.coche.anio
+    };
+    this.cocheService.altaCoche(nuevoCoche)
+    .subscribe(
+      () => {
+        console.log('Se han insertado los datos.');
+      },
+      (error) => {
+        console.log('No se ha podido insertar los datos');
+      }
+    );
+    /*this.coche.id = null;
+    this.coche.marca = '';
+    this.coche.modelo = '';
+    this.coche.color = '';
+    this.coche.anio = null;
+    */
   }
 
 }

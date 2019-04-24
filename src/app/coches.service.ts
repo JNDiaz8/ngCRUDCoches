@@ -20,4 +20,16 @@ export class CochesService {
     return this.http.get<Coche>(this.url + '/' + id);
   }
 
+  altaCoche(coche: Coche) {
+    let objeto = {
+      id: coche.id,
+      marca: coche.marca,
+      modelo: coche.modelo,
+      color: coche.color,
+      anio: coche.anio
+    };
+    return this.http.post<Coche>(this.url, objeto);
+
+  }
+
 }

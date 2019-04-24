@@ -1,25 +1,26 @@
-<p>Crea tu nuevo coche</p>
-<form class="alta-form" [formGroup]="altaForm" (ngSubmit)="guardar()">
+<h2>Crea tu nuevo coche</h2>
 
   <p><b>Introduce la Marca del coche:</b></p>
-  <mat-form-field class="alta-full-width">
-    <input matInput placeholder="Marca">
-  </mat-form-field>
+  ID: <input type="number" placeholder="Id del coche" [(ngModel)]="coche.id"> <br/>
+
+  <p><b>Introduce la Marca del coche:</b></p>
+  Marca: <input type="text" placeholder="Marca del coche" [(ngModel)]="coche.marca"> <br/>
 
   <p><b>Introduce el Modelo del coche:</b></p>
-  <mat-form-field class="alta-full-width">
-    <input matInput placeholder="Modelo">
-  </mat-form-field>
+  Modelo: <input type="text" placeholder="Modelo del coche" [(ngModel)]="coche.modelo"> <br/>
 
   <p><b>Introduce el Color del coche:</b></p>
-  <mat-form-field class="alta-full-width">
-    <input matInput placeholder="Color">
-  </mat-form-field>
+  Color: <input type="text" placeholder="Color del coche" [(ngModel)]="coche.color"> <br/>
 
   <p><b>Introduce el Año del coche:</b></p>
-  <mat-form-field class="alta-full-width">
-      <input matInput placeholder="Anio">
-    </mat-form-field>
+  Año: <input type="number" placeholder="Año del coche" [(ngModel)]="coche.anio"> <br/>
 
-  <button type="submit" mat-raised-button color="primary" [disabled]="!altaForm.valid">Guardar</button>
-  </form>
+  <button (click)="altaCoche()">Alta</button>
+
+
+
+
+
+
+
+
