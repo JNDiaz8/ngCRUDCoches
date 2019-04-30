@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Coche } from 'src/modelos/coche';
 import { CochesService } from '../coches.service';
+import {SelectionModel} from '@angular/cdk/collections';
 
 @Component({
   selector: 'app-read',
@@ -10,6 +11,7 @@ import { CochesService } from '../coches.service';
 export class ReadComponent implements OnInit {
 
   coches: Coche[];
+  displayedColumns: string[] = ['id', 'marca', 'modelo', 'color', 'anio'];
 
   constructor(private cochesService: CochesService) { }
 
@@ -19,5 +21,6 @@ export class ReadComponent implements OnInit {
         this.coches = coches;
       });
   }
+
 
 }

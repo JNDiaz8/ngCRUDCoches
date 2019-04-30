@@ -1,9 +1,20 @@
-<nav style="text-align:center;">
-  <a routerLink="">INICIO</a> |
-  <a routerLink="/read">Lista de coches</a> |
-  <a routerLink="/create">Añadir nuevo coche</a> |
-  <a routerLink="/update/1">Modificar coche de la lista</a> |
-  <a routerLink="/delete/1">Borrar coche de la lista</a> |
-</nav>
+
+<button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="">
+      <mat-icon>directions_cars</mat-icon>
+      <span>Inicio</span>
+    </button>
+    <button mat-menu-item routerLink="/read">
+      <mat-icon>menu</mat-icon>
+      <span>Lista</span>
+    </button>
+    <button mat-menu-item routerLink="/create">
+      <mat-icon>voicemail</mat-icon>
+      <span>Añadir</span>
+    </button>
+  </mat-menu>
 
 <router-outlet></router-outlet>

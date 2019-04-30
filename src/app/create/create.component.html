@@ -1,21 +1,36 @@
-<h2>Crea tu nuevo coche</h2>
+<b> <h2>Crea tu nuevo coche</h2></b>
 
-  <p><b>Introduce la Marca del coche:</b></p>
-  ID: <input type="number" placeholder="Id del coche" [(ngModel)]="coche.id"> <br/>
+<div class="example-container">
 
-  <p><b>Introduce la Marca del coche:</b></p>
-  Marca: <input type="text" placeholder="Marca del coche" [(ngModel)]="coche.marca"> <br/>
+  <mat-form-field appearance="outline">
+    <mat-label>Id del coche</mat-label>
+    <input matInput type="number" placeholder="Inserte un digito" [(ngModel)]="coche.id"> <br/>
+  </mat-form-field>
 
-  <p><b>Introduce el Modelo del coche:</b></p>
-  Modelo: <input type="text" placeholder="Modelo del coche" [(ngModel)]="coche.modelo"> <br/>
+  <mat-form-field appearance="outline">
+    <mat-label>Marca del coche</mat-label>
+    <input matInput type="text" placeholder="Inserte la marca del vehiculo" [(ngModel)]="coche.marca"> <br/>
+    </mat-form-field>
 
-  <p><b>Introduce el Color del coche:</b></p>
-  Color: <input type="text" placeholder="Color del coche" [(ngModel)]="coche.color"> <br/>
+  <mat-form-field appearance="outline">
+    <mat-label>Modelo del coche</mat-label>
+    <input matInput type="text" placeholder="Inserte la modelo del vehiculo" [(ngModel)]="coche.modelo"> <br/>
+  </mat-form-field>
 
-  <p><b>Introduce el Año del coche:</b></p>
-  Año: <input type="number" placeholder="Año del coche" [(ngModel)]="coche.anio"> <br/>
+  <mat-form-field appearance="outline">
+    <mat-label>Color del coche</mat-label>
+    <input matInput type="text" placeholder="Inserte el color del vehiculo" [(ngModel)]="coche.color"> <br/>
+  </mat-form-field>
 
-  <button (click)="altaCoche()">Alta</button>
+  <mat-form-field appearance="outline">
+    <mat-label>Año del coche</mat-label>
+    <input matInput type="number" placeholder="Inserte la año del vehiculo" [(ngModel)]="coche.anio"> <br/>
+  </mat-form-field>
+
+</div>
+
+<button mat-stroked-button color="primary" (click)="altaCoche()">Alta</button>
+
 
 
 

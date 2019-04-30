@@ -12,7 +12,10 @@ import { DeleteComponent } from './delete/delete.component';
 import { ErrorComponent } from './error/error.component';
 
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { MatButtonModule, MatInputModule, MatFormFieldControl, MatFormFieldModule, MatSelectModule, MatListModule, MatIconModule } from '@angular/material';
+import { MatButtonModule, MatInputModule, MatFormFieldModule, MatSelectModule, MatListModule, MatTableModule } from '@angular/material';
+import { MatIconModule} from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -28,16 +31,20 @@ import { MatButtonModule, MatInputModule, MatFormFieldControl, MatFormFieldModul
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatInputModule,
     MatFormFieldModule,
-    MatSelectModule,
+    MatInputModule,
+    MatIconModule,
     MatListModule,
-    MatIconModule
+    MatMenuModule,
+    MatSelectModule,
+    MatTableModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }

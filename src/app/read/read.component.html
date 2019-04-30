@@ -1,5 +1,38 @@
-<p>Lista de coches</p>
-<table>
+<b><p>Lista de coches</p></b>
+<table mat-table [dataSource]="coches" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let car"> {{car.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="marca">
+    <th mat-header-cell *matHeaderCellDef> Marca </th>
+    <td mat-cell *matCellDef="let car"> {{car.marca}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="modelo">
+    <th mat-header-cell *matHeaderCellDef> Modelo </th>
+    <td mat-cell *matCellDef="let car"> {{car.modelo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="color">
+    <th mat-header-cell *matHeaderCellDef> Color </th>
+    <td mat-cell *matCellDef="let car"> {{car.color}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="anio">
+    <th mat-header-cell *matHeaderCellDef> Año </th>
+    <td mat-cell *matCellDef="let car"> {{car.anio}} </td>
+  </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+
+<!-- <table>
   <tr>
     <td><b>ID</b></td>
     <td><b>Marca</b></td>
@@ -14,4 +47,5 @@
     <td>{{car.color}}</td>
     <td>{{car.anio}}</td>
   </tr>
-</table>
+</table>-->
+

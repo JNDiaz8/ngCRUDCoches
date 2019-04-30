@@ -146,6 +146,13 @@
       "modelo": "Golf GTI",
       "color": "Blanco",
       "anio": 2014
+    },
+    {
+      "id": 22,
+      "marca": "Seat",
+      "modelo": "Ibiza",
+      "color": "Rojo",
+      "anio": 2009
     }
   ]
 }
