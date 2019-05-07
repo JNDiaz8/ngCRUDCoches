@@ -1,1 +1,33 @@
 <p>Modificaciones</p>
+
+<div class="example-container">
+
+  <mat-form-field appearance="outline">
+    <mat-label>Id del coche</mat-label>
+    <input matInput type="number" placeholder="Inserte un digito" [(ngModel)]="coche.id"> <br/>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Marca del coche</mat-label>
+    <input matInput type="text" placeholder="Inserte la marca del vehiculo" [(ngModel)]="coche.marca"> <br/>
+    </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Modelo del coche</mat-label>
+    <input matInput type="text" placeholder="Inserte la modelo del vehiculo" [(ngModel)]="coche.modelo"> <br/>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Color del coche</mat-label>
+    <input matInput type="text" placeholder="Inserte el color del vehiculo" [(ngModel)]="coche.color"> <br/>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Año del coche</mat-label>
+    <input matInput type="number" placeholder="Inserte la año del vehiculo" [(ngModel)]="coche.anio"> <br/>
+  </mat-form-field>
+
+</div>
+
+<button mat-stroked-button color="primary" (click)="updateCoche()">Modificar</button>
+<button mat-stroked-button color="basic" (click)="atras()">Volver</button>

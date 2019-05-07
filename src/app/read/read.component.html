@@ -8,7 +8,7 @@
 
   <ng-container matColumnDef="marca">
     <th mat-header-cell *matHeaderCellDef> Marca </th>
-    <td mat-cell *matCellDef="let car"> {{car.marca}} </td>
+    <td mat-cell *matCellDef="let car" [routerLink]="['/detalle',car.id]"> {{car.marca}} </td>
   </ng-container>
 
   <ng-container matColumnDef="modelo">

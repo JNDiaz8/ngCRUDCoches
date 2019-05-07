@@ -8,7 +8,6 @@ import { InicioComponent } from './inicio/inicio.component';
 import { ReadComponent } from './read/read.component';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
-import { DeleteComponent } from './delete/delete.component';
 import { ErrorComponent } from './error/error.component';
 
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -16,6 +15,7 @@ import { MatButtonModule, MatInputModule, MatFormFieldModule, MatSelectModule, M
 import { MatIconModule} from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule} from '@angular/material/menu';
+import { DetalleComponent } from './detalle/detalle.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +24,8 @@ import { MatMenuModule} from '@angular/material/menu';
     ReadComponent,
     CreateComponent,
     UpdateComponent,
-    DeleteComponent,
-    ErrorComponent
+    ErrorComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,

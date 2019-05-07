@@ -1,0 +1,13 @@
+<mat-list role="list" *ngIf="coches| async as car">
+  <mat-list-item role="listitem">Id: {{car.id}}</mat-list-item>
+  <mat-list-item role="listitem">Marca: {{car.marca}}</mat-list-item>
+  <mat-list-item role="listitem">Modelo: {{car.modelo}}</mat-list-item>
+  <mat-list-item role="listitem">Color: {{car.color}}</mat-list-item>
+  <mat-list-item role="listitem">Año: {{car.anio}}</mat-list-item>
+</mat-list>
+
+<button mat-flat-button color="basic" (click)="atras()">Atrás</button>
+
+<button mat-flat-button color="warn" (click)="borrar()">Borrar</button>
+
+<button mat-flat-button color="primary" (click)="actualizar()">Actualizar</button>

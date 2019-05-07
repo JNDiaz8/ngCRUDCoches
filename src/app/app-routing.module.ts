@@ -5,8 +5,8 @@ import { InicioComponent } from './inicio/inicio.component';
 import { ReadComponent } from './read/read.component';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
-import { DeleteComponent } from './delete/delete.component';
 import { ErrorComponent } from './error/error.component';
+import { DetalleComponent } from './detalle/detalle.component';
 
 const routes: Routes = [
   {
@@ -28,8 +28,8 @@ const routes: Routes = [
     component: UpdateComponent
   },
   {
-    path: 'delete/:id',
-    component: DeleteComponent
+    path: 'detalle/:id',
+    component: DetalleComponent
   },
   {
     path: '**',

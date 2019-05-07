@@ -32,4 +32,8 @@ export class CochesService {
 
   }
 
+  borrarCoche(id: number | string): Observable<Coche> {
+    return this.http.delete<Coche>(this.url + '/' + id);
+  }
+
 }
