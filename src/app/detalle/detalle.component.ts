@@ -33,11 +33,33 @@ export class DetalleComponent implements OnInit {
   }
 
   actualizar() {
-    this.router.navigate(['/update/:id']);
+    this.route.paramMap.pipe(
+      switchMap(
+        (params: ParamMap) =>
+          params.get('id')
+      )).subscribe(
+        (id) => {
+          this.router.navigate(['/update/', id]);
+        }
+      );
   }
 
   borrar() {
-    //this.cochesService.borrarCoche();
+    this.route.paramMap.pipe(
+      switchMap(
+        (params: ParamMap) =>
+          this.cochesService.borrarCoche(params.get('id')))
+      ).subscribe(
+        () => {
+          console.log('Se ha borrado con éxito');
+          this.router.navigate(['/read']);
+        },
+        (error) => {
+          console.log('Error al borrar coche');
+          this.router.navigate(['/**']);
+        }
+      );
+
   }
 
 }

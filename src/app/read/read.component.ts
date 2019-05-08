@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Coche } from 'src/modelos/coche';
 import { CochesService } from '../coches.service';
-import {SelectionModel} from '@angular/cdk/collections';
 
 @Component({
   selector: 'app-read',

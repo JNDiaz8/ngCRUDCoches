@@ -21,19 +21,30 @@ export class CochesService {
   }
 
   altaCoche(coche: Coche) {
-    let objeto = {
+    let car = {
       id: coche.id,
       marca: coche.marca,
       modelo: coche.modelo,
       color: coche.color,
       anio: coche.anio
     };
-    return this.http.post<Coche>(this.url, objeto);
+    return this.http.post<Coche>(this.url, car);
 
   }
 
   borrarCoche(id: number | string): Observable<Coche> {
     return this.http.delete<Coche>(this.url + '/' + id);
+  }
+
+  updateCoche(coche: Coche): Observable<Coche> {
+    let car = {
+      id: coche.id,
+      marca: coche.marca,
+      modelo: coche.modelo,
+      color: coche.color,
+      anio: coche.anio
+    };
+    return this.http.put<Coche>(this.url, car);
   }
 
 }

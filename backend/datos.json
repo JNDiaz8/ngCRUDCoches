@@ -104,55 +104,6 @@
       "modelo": "Carrera GT",
       "color": "Verde",
       "anio": 2014
-    },
-    {
-      "id": 16,
-      "marca": "Honda",
-      "modelo": "Prelude",
-      "color": "Naranja",
-      "anio": 2015
-    },
-    {
-      "id": 17,
-      "marca": "Alfa Romeo",
-      "modelo": "Spider",
-      "color": "Amarillo",
-      "anio": 2005
-    },
-    {
-      "id": 18,
-      "marca": "BMW",
-      "modelo": "X6 M",
-      "color": "Fuscia",
-      "anio": 2019
-    },
-    {
-      "id": 19,
-      "marca": "Dodge",
-      "modelo": "Ram 2500",
-      "color": "Violet",
-      "anio": 2008
-    },
-    {
-      "id": 20,
-      "marca": "Rolls-Royce",
-      "modelo": "Ghost",
-      "color": "Rojo",
-      "anio": 2017
-    },
-    {
-      "id": 21,
-      "marca": "Volkswagen",
-      "modelo": "Golf GTI",
-      "color": "Blanco",
-      "anio": 2014
-    },
-    {
-      "id": 22,
-      "marca": "Seat",
-      "modelo": "Ibiza",
-      "color": "Rojo",
-      "anio": 2009
     }
   ]
 }

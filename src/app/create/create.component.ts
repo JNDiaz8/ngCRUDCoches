@@ -13,7 +13,7 @@ export class CreateComponent implements OnInit {
   garaje: Array<Coche>;
   coche: Coche = {id: null, marca: '', modelo: '', color: '', anio: null};
 
-  constructor(private cocheService: CochesService) {}
+  constructor(private cochesService: CochesService) {}
 
   ngOnInit() {
 
@@ -27,13 +27,14 @@ export class CreateComponent implements OnInit {
       color: this.coche.color,
       anio: this.coche.anio
     };
-    this.cocheService.altaCoche(nuevoCoche)
+    this.cochesService.altaCoche(nuevoCoche)
     .subscribe(
       () => {
         console.log('Se han insertado los datos.');
       },
       (error) => {
         console.log('No se ha podido insertar los datos');
+
       }
     );
     /*this.coche.id = null;
