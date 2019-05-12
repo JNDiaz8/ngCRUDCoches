@@ -18,15 +18,8 @@
       "id": 3,
       "marca": "Lotus",
       "modelo": "Elan",
-      "color": "Azul Electrico",
-      "anio": 2014
-    },
-    {
-      "id": 4,
-      "marca": "Lexus",
-      "modelo": "GS",
-      "color": "Rosa",
-      "anio": 2016
+      "color": "Azul Electrica",
+      "anio": 2015
     },
     {
       "id": 5,

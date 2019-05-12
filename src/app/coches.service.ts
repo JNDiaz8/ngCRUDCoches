@@ -36,15 +36,8 @@ export class CochesService {
     return this.http.delete<Coche>(this.url + '/' + id);
   }
 
-  updateCoche(coche: Coche): Observable<Coche> {
-    let car = {
-      id: coche.id,
-      marca: coche.marca,
-      modelo: coche.modelo,
-      color: coche.color,
-      anio: coche.anio
-    };
-    return this.http.put<Coche>(this.url, car);
+  updateCoche(coche: Coche) {
+    return this.http.put<Coche>(this.url + '/' + coche.id, coche);
   }
 
 }
